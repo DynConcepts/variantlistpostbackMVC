@@ -1,0 +1,15 @@
+﻿
+@model QuestionMultipleRadioModel
+
+@Html.Hidden("ModelType", Model.GetType())
+
+<h3>@Html.LabelFor(m => m.Question)</h3>
+<br>
+@Html.RadioButtonFor(m => m.Selection, "A") @Model.Choices["A"]
+<br>
+@Html.RadioButtonFor(m => m.Selection, "B") @Model.Choices["B"]
+<br>
+@Html.RadioButtonFor(m => m.Selection, "C") @Model.Choices["C"]
+<br>
+@Html.RadioButtonFor(m => m.Selection, "D") @Model.Choices["D"]
+

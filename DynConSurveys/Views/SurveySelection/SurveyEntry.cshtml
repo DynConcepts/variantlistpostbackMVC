@@ -1,0 +1,27 @@
+﻿
+@model SurveyDefinitionModel
+@{
+    ViewData["Title"] = "Please Complete Survey";
+}
+
+
+    <div>
+        <h2>@Model.Title</h2>
+        <br />
+        <br />
+        @using (Html.BeginForm("SurveyPostback", "SurveySelection", FormMethod.Post, new { @area = "", @role = "form" }))
+        {
+            @Html.HiddenFor(m => m.Id)
+            @Html.HiddenFor(m => m.Title)
+            @Html.EditorFor(m=>m.Questions);
+
+            @*@foreach (var question in Model.Questions)
+            {
+                Html.EditorFor(m=>question,question.QuestionType+"Model");
+                <partial name="@question.QuestionType" model='@question' />
+            }*@
+            <br />
+            <br />
+            <input type="submit" value="Submit Survey">
+        }
+    </div>

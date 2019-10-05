@@ -1,0 +1,13 @@
+﻿
+@model QuestionMultipleCheckBoxModel
+
+<h3>@Html.LabelFor(m=>m.Question)</h3>
+<br>
+@Html.CheckBoxFor(m => m.Choice_A) @Model.Choices["A"]
+<br>
+@Html.CheckBoxFor(m => m.Choice_B) @Model.Choices["B"]
+<br>
+@Html.CheckBoxFor(m => m.Choice_C) @Model.Choices["C"]
+<br>
+@Html.CheckBoxFor(m => m.Choice_D) @Model.Choices["D"]
+

@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Select Desired Survey";
+}
+
+    <div>
+        <h2>Select Desired Survey</h2>
+        <br />
+        <br />
+        @foreach (var definition in Model.Definitions)
+        {
+            <a asp-area="" asp-controller="SurveySelection" asp-action="SelectSurvey" asp-route-id="@definition.Id">@definition.Title</a>
+        <br />
+        }
+    </div>
